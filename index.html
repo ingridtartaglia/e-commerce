@@ -1,0 +1,147 @@
+<html ng-app="myApp">
+<head>
+    <title>#17 - E-commerce</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body ng-controller="commerce">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                data-target="#navbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#main">Ingrid's</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#drinks">Drinks</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<main id="main">
+    <div class="container-fluid main-atf">
+        <div class="row">
+            <div class="col-xs-12 main-placeholder">
+                <h1 class="text-center">Wanna drink?</h1>
+                <p class="lead text-center">See above the best offers and order your favorite drink</p>
+                <div class="main-arrow text-center">
+                    <a href="#about"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<section id="about">
+    <div class="container">
+        <h3 class="text-center">About</h3>
+        <div class="row">
+            <div class="col-xs-12 about-placeholder">
+                <p class="lead about-text">Lorem ipsum dolor sit amet, ne inani option vidisse his.
+                    Soluta integre apeirian eam at. Dictas euismod equidem ad per, vel ut soluta vocent, vix in elit quas commodo.
+                     An antiopam scripserit nam, ne per duis dictas possim, ei sed cetero aliquam.
+                     Labores tincidunt nam cu, ex mei noster graecis eloquentiam.
+                    Choro malorum docendi mel an, pri facilisis periculis ad.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="drinks">
+    <div class="container">
+        <h3 class="text-center">Drinks</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-3 drinks-placeholder">
+                <figure>
+                    <img src="">
+                    <figcaption>
+                        <p class="drink-title"></p>
+                        <p class="drink-description"></p>
+                        <span class="drink-price">$ </span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="order">
+    <div class="container">
+        <h3 class="text-center">Order your drink</h3>
+        <p class="lead">Preencha o formulário abaixo para que possamos entrar em contato e efetuar a entrega!</p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-3 order-placeholder">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">E-mail</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Phone</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail">
+                    </div>
+                    <div>
+                        <label for="convert-type">Select an option:</label>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-xs-5 no-padding">
+                        <label for="convert-from">Quantity</label>
+                        <input type="number" class="form-control" placeholder>
+                    </div>
+                    <button type="submit" class="btn btn-default">Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <h3>Contact us</h3>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <address>
+                    <strong>Twitter, Inc.</strong><br>
+                    1355 Market Street, Suite 900<br>
+                    San Francisco, CA 94103<br>
+                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                </address>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <strong>Follow us</strong><br>
+                <span class="facebook"></span>
+                <span class="instagram"></span>
+                <span class="twitter"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
