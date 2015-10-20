@@ -1,7 +1,7 @@
 body {
   padding-top: 50px;
   background: #CDFEC8;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: black; }
 
 main {
@@ -18,15 +18,20 @@ main {
       main .main-placeholder {
         margin: 3em auto; } }
   main h1 {
+    text-shadow: 1px 1px 2px #969696;
     font-size: 5em;
     margin-bottom: 0.66667em; }
+  main .subtitle {
+    text-shadow: 1px 1px 2px #969696; }
   main .order-button {
     background: #23812E !important;
     color: white !important;
     border-radius: 0px !important;
-    box-shadow: none; }
+    box-shadow: none;
+    margin-top: 1em; }
   main .main-arrow {
-    margin-top: 5em; }
+    margin-top: 5em;
+    text-shadow: 1px 1px 2px #969696; }
     @media screen and (max-width: 768px) {
       main .main-arrow {
         margin-top: 3em; } }
@@ -35,10 +40,12 @@ main {
 
 #about h3 {
   padding-top: 50px;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px #969696; }
 #about p {
   padding: 0 5em;
-  margin-bottom: 2em; }
+  margin-bottom: 4em; }
   @media screen and (max-width: 768px) {
     #about p {
       font-size: 1.25em;
@@ -48,7 +55,9 @@ main {
   background: white; }
   #drinks h3 {
     padding-top: 50px;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px #969696; }
   #drinks .drinks-placeholder {
     padding: 0 5em 5em 5em; }
   #drinks img {
@@ -58,7 +67,9 @@ main {
 
 #order h3 {
   padding-top: 50px;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  font-weight: bolder;
+  text-shadow: 1px 1px 2px #969696; }
 #order p {
   padding: 0 5em; }
   @media screen and (max-width: 768px) {
@@ -90,16 +101,22 @@ main {
     background-color: #ddd; }
     #order form .btn:focus:hover {
       background-color: #ddd; }
+  #order form .order-success {
+    padding-top: 1em;
+    color: #23812E;
+    font-size: 1.5em; }
 
 footer {
   background: black;
   color: white; }
   footer h3 {
     padding-top: 50px;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    font-weight: bolder; }
   footer .copyright {
     font-size: 0.75em;
     padding-top: 50px;
-    margin-bottom: 2em; }
+    margin-bottom: 2em;
+    font-weight: bolder; }
 
 /*# sourceMappingURL=styles.css.map */

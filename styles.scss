@@ -1,4 +1,4 @@
-$helvetica: 'Helvetica', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
 
 $light-green: #CDFEC8;
 $dark-green: #23812E;
@@ -18,9 +18,13 @@ $margin-center: 0 auto;
 
 ////
 
+@mixin shadow {
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
 @mixin title {
     padding-top: $section-padding-top;
     margin-bottom: $title-margin-bottom;
+    font-weight: bolder;
 }
 @mixin paragraph {
     padding: 0 $text-padding;
@@ -42,7 +46,7 @@ $margin-center: 0 auto;
 body {
     padding-top: $section-padding-top;
     background: $light-green;
-    font-family: $helvetica;
+    font-family: $open-sans;
     color: $black;
 }
 
@@ -62,14 +66,20 @@ main {
         }
     }
     h1 {
+        @include shadow;
         font-size: 5em;
         margin-bottom: $title-margin-bottom / 3;
     }
+    .subtitle {
+        @include shadow;
+    }
     .order-button {
         @include button;
+        margin-top: 1em;
     }
     .main-arrow {
         margin-top: 5em;
+        @include shadow;
         @media screen and (max-width: 768px) {
             margin-top: 3em;
         }
@@ -78,23 +88,32 @@ main {
 }
 
 #about {
-    h3 { @include title; }
+    h3 {
+        @include title;
+        @include shadow;
+    }
     p {
         @include paragraph;
-        margin-bottom: $title-margin-bottom;
+        margin-bottom: $title-margin-bottom * 2;
     }
 }
 
 #drinks {
     background: $white;
-    h3 { @include title; }
+    h3 {
+        @include title;
+        @include shadow;
+    }
     .drinks-placeholder { padding: 0 5em 5em 5em; }
     img { margin-bottom: $title-margin-bottom; }
     .drink-title, .drink-price { font-size: $medium-font; }
 }
 
 #order {
-    h3 { @include title; }
+    h3 {
+        @include title;
+        @include shadow;
+    }
     p { @include paragraph; }
     form {
         max-width: 40%;
@@ -121,6 +140,11 @@ main {
             &:hover {
                 background-color: $gray;
             }
+        }
+        .order-success {
+            padding-top: 1em;
+            color: $dark-green;
+            font-size: $medium-font;
         }
     }
 }
