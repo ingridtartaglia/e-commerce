@@ -20,7 +20,8 @@ main {
   main h1 {
     text-shadow: 1px 1px 2px #969696;
     font-size: 5em;
-    margin-bottom: 0.66667em; }
+    margin-bottom: 1em;
+    margin-top: 1em; }
   main .subtitle {
     text-shadow: 1px 1px 2px #969696; }
   main .order-button {
@@ -28,15 +29,10 @@ main {
     color: white !important;
     border-radius: 0px !important;
     box-shadow: none;
-    margin-top: 1em; }
-  main .main-arrow {
-    margin-top: 5em;
-    text-shadow: 1px 1px 2px #969696; }
-    @media screen and (max-width: 768px) {
-      main .main-arrow {
-        margin-top: 3em; } }
-    main .main-arrow a {
-      color: white; }
+    margin-top: 8em; }
+    @media screen and (max-width: 767px) {
+      main .order-button {
+        margin-top: 5em; } }
 
 #about h3 {
   padding-top: 50px;

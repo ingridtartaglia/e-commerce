@@ -46,14 +46,13 @@ myApp.controller('commerce', function($scope, $timeout){
         },
     ];
 
-    $scope.order = [];
+    $scope.order = {};
     $scope.successOrder = false;
 
-    $scope.orderDrink = function($timeout){
-        $scope.order.push($scope.form);
+    $scope.orderDrink = function(){
         $timeout(function(){
             $scope.successOrder = true;
-        }, 10000);
-        $scope.order = [];
+        }, 1000);
+        $scope.order = {};
     };
 });

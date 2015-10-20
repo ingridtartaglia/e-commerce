@@ -39,9 +39,6 @@
                 <h1>Wanna drink?</h1>
                 <p class="lead subtitle">See above the best offers and order your favorite drink</p>
                 <a class="btn btn-default btn-lg order-button" href="#order">Order Now</a>
-                <div class="main-arrow">
-                    <a href="#about"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
-                </div>
             </div>
         </div>
     </div>
@@ -104,9 +101,9 @@
                     </div>
                     <div class="form-group">
                         <label for="order-type">Select an option:</label>
-                        <select class="form-control">
+                        <select class="form-control" ng-model="order.option">
                             <option ng-repeat="drink in drinks" ng-value="{{drink.value}}"
-                                    ng-model="order.option" required>{{drink.title}}</option>
+                                    required>{{drink.title}}</option>
                         </select>
                     </div>
                     <div class="form-group">

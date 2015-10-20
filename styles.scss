@@ -40,7 +40,6 @@ $margin-center: 0 auto;
     box-shadow: none;
 }
 
-
 ////
 
 body {
@@ -68,22 +67,18 @@ main {
     h1 {
         @include shadow;
         font-size: 5em;
-        margin-bottom: $title-margin-bottom / 3;
+        margin-bottom: $title-margin-bottom/2;
+        margin-top: $title-margin-bottom/2;
     }
     .subtitle {
         @include shadow;
     }
     .order-button {
         @include button;
-        margin-top: 1em;
-    }
-    .main-arrow {
-        margin-top: 5em;
-        @include shadow;
-        @media screen and (max-width: 768px) {
-            margin-top: 3em;
+        margin-top: 8em;
+        @media screen and (max-width: 767px){
+            margin-top: 5em;
         }
-        a { color: $white; }
     }
 }
 
