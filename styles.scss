@@ -1,16 +1,43 @@
 $helvetica: 'Helvetica', sans-serif;
 
-$light-green: #98FB98;
+$light-green: #CDFEC8;
+$dark-green: #23812E;
 $black: black;
+$gray: #ddd;
 $white: white;
 
 $section-padding-top: 50px;
 $height: 80vh;
 $title-margin-bottom: 2em;
 $text-padding: 5em;
+
+$medium-font: 1.5em;
 $small-font: 1.25em;
 
 $margin-center: 0 auto;
+
+////
+
+@mixin title {
+    padding-top: $section-padding-top;
+    margin-bottom: $title-margin-bottom;
+}
+@mixin paragraph {
+    padding: 0 $text-padding;
+        @media screen and (max-width: 768px) {
+            font-size: $small-font;
+            padding: 0 ($text-padding / 2);
+        }
+}
+@mixin button {
+    background: $dark-green !important;
+    color: $white !important;
+    border-radius: 0px !important;
+    box-shadow: none;
+}
+
+
+////
 
 body {
     padding-top: $section-padding-top;
@@ -28,38 +55,82 @@ main {
         height: $height;
     }
     .main-placeholder {
-        margin: 10em auto;
+        margin: 8em auto;
         color: $white;
         @media screen and (max-width: 768px){
-            margin: 4em auto;
+            margin: 3em auto;
         }
     }
     h1 {
         font-size: 5em;
-        margin-bottom: $title-margin-bottom / 2;
+        margin-bottom: $title-margin-bottom / 3;
+    }
+    .order-button {
+        @include button;
     }
     .main-arrow {
         margin-top: 5em;
         @media screen and (max-width: 768px) {
             margin-top: 3em;
         }
-        a {
-            color: $white;
-        }
+        a { color: $white; }
     }
 }
 
 #about {
-    height: $height;
-    h3 {
-        padding-top: $section-padding-top;
+    h3 { @include title; }
+    p {
+        @include paragraph;
         margin-bottom: $title-margin-bottom;
     }
-    p {
-        padding: 0 $text-padding;
+}
+
+#drinks {
+    background: $white;
+    h3 { @include title; }
+    .drinks-placeholder { padding: 0 5em 5em 5em; }
+    img { margin-bottom: $title-margin-bottom; }
+    .drink-title, .drink-price { font-size: $medium-font; }
+}
+
+#order {
+    h3 { @include title; }
+    p { @include paragraph; }
+    form {
+        max-width: 40%;
+        margin: $margin-center;
+        padding-bottom: $title-margin-bottom * 2;
         @media screen and (max-width: 768px) {
-            font-size: $small-font;
-            padding: 0 ($text-padding / 2);
+            max-width: 70%;
         }
+        label { font-weight: normal; }
+        input, select {
+            border-radius: 0;
+            box-shadow: none;
+            &:focus {
+                outline-color: none;
+                border-color: transparent !important;
+            }
+        }
+        .order-button {
+            @include button;
+        }
+        .btn:focus {
+            outline: none;
+            background-color: $gray;
+            &:hover {
+                background-color: $gray;
+            }
+        }
+    }
+}
+
+footer {
+    background: $black;
+    color: $white;
+    h3 { @include title; }
+    .copyright {
+        font-size: 0.75em;
+        @include title;
     }
 }

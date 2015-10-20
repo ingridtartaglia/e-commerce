@@ -1,6 +1,6 @@
 body {
   padding-top: 50px;
-  background: #98FB98;
+  background: #CDFEC8;
   font-family: "Helvetica", sans-serif;
   color: black; }
 
@@ -12,14 +12,19 @@ main {
     background: rgba(0, 0, 0, 0.5);
     height: 80vh; }
   main .main-placeholder {
-    margin: 10em auto;
+    margin: 8em auto;
     color: white; }
     @media screen and (max-width: 768px) {
       main .main-placeholder {
-        margin: 4em auto; } }
+        margin: 3em auto; } }
   main h1 {
     font-size: 5em;
-    margin-bottom: 1em; }
+    margin-bottom: 0.66667em; }
+  main .order-button {
+    background: #23812E !important;
+    color: white !important;
+    border-radius: 0px !important;
+    box-shadow: none; }
   main .main-arrow {
     margin-top: 5em; }
     @media screen and (max-width: 768px) {
@@ -28,16 +33,73 @@ main {
     main .main-arrow a {
       color: white; }
 
-#about {
-  height: 80vh; }
-  #about h3 {
+#about h3 {
+  padding-top: 50px;
+  margin-bottom: 2em; }
+#about p {
+  padding: 0 5em;
+  margin-bottom: 2em; }
+  @media screen and (max-width: 768px) {
+    #about p {
+      font-size: 1.25em;
+      padding: 0 2.5em; } }
+
+#drinks {
+  background: white; }
+  #drinks h3 {
     padding-top: 50px;
     margin-bottom: 2em; }
-  #about p {
-    padding: 0 5em; }
-    @media screen and (max-width: 768px) {
-      #about p {
-        font-size: 1.25em;
-        padding: 0 2.5em; } }
+  #drinks .drinks-placeholder {
+    padding: 0 5em 5em 5em; }
+  #drinks img {
+    margin-bottom: 2em; }
+  #drinks .drink-title, #drinks .drink-price {
+    font-size: 1.5em; }
+
+#order h3 {
+  padding-top: 50px;
+  margin-bottom: 2em; }
+#order p {
+  padding: 0 5em; }
+  @media screen and (max-width: 768px) {
+    #order p {
+      font-size: 1.25em;
+      padding: 0 2.5em; } }
+#order form {
+  max-width: 40%;
+  margin: 0 auto;
+  padding-bottom: 4em; }
+  @media screen and (max-width: 768px) {
+    #order form {
+      max-width: 70%; } }
+  #order form label {
+    font-weight: normal; }
+  #order form input, #order form select {
+    border-radius: 0;
+    box-shadow: none; }
+    #order form input:focus, #order form select:focus {
+      outline-color: none;
+      border-color: transparent !important; }
+  #order form .order-button {
+    background: #23812E !important;
+    color: white !important;
+    border-radius: 0px !important;
+    box-shadow: none; }
+  #order form .btn:focus {
+    outline: none;
+    background-color: #ddd; }
+    #order form .btn:focus:hover {
+      background-color: #ddd; }
+
+footer {
+  background: black;
+  color: white; }
+  footer h3 {
+    padding-top: 50px;
+    margin-bottom: 2em; }
+  footer .copyright {
+    font-size: 0.75em;
+    padding-top: 50px;
+    margin-bottom: 2em; }
 
 /*# sourceMappingURL=styles.css.map */
